@@ -63,20 +63,3 @@ lst_4 = [i for i in lst_3 if i in list_3]
 
 # На выходе пользователь получает список видов, соответствующих его критериям:
 print('Подходящие виды: ', list(set(lst_4)))
-
-print('Объем в памяти словаря с молекулярной массой гемицеллюлоз:', sys.getsizeof(molecular_mass), 'байт.')
-print('Объем в памяти словаря со степенью этерификации гемицеллюлоз:', sys.getsizeof(ether), 'байт.')
-
-
-def Memory(dict):
-    """Функция показывает объем памяти, занимаемый каждым ключом и значением словаря"""
-    for key, value in dict.items():
-        print(f'Ключ: {key}, объем в памяти: {sys.getsizeof(key)}')
-        print(f'Значение: {value}, объем в памяти: {sys.getsizeof(value)}')
-
-
-memory_1 = Memory(molecular_mass)
-memory_2 = Memory(ether)
-
-print(memory_1)
-print(memory_2)
